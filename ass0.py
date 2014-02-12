@@ -1,0 +1,2 @@
+from analyse_collisions import analyse_collisions
+analyse_collisions()
