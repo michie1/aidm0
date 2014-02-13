@@ -1,6 +1,6 @@
 from numpy import *
-K = 1
-N = 10
+K = 100
+N = 1000
 L = 5
 buckets = random.binomial(K, 1/N, N)
 counts = [0] * (L + 1) # # of buckets with l objects
