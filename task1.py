@@ -9,8 +9,8 @@ def analyse_collisions(K, N, L):
 	rand_int = random.randint(1, N + 1, K) # Random objects
 						
 	# Count elements in buckets
-	for i in rand_int:
-		buckets[i] += 1
+	for v in rand_int:
+		buckets[v] += 1
 
 	# Count buckets with specific amount of objects in bucket
 	for n in range(N):
