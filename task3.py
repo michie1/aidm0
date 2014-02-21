@@ -6,13 +6,25 @@ from scipy import stats
 #k = 2 # number of heads
 #n = 2 # number of coin tosses
 #p = 0.5 # probability of heads
-k = 1
+
+# 5 elementen in 10 buckets, hoeveel buckets met 1 element (of 0).
+# k = aantal element in een bucket
+# n = 5 el
+# l is lengte van de lijst
+
+k = 5
 n = 10
 l = 5
 counts = [0] * l
 
+rv = stats.binom(k, 1/float(n));
+print rv.dist
+
+
+
 for i in range(l):
-	counts[i] = stats.binom.pmf(k, n, i) * n
-	print stats.binom.pmf(k, n, i)
+	counts[i] = stats.binom.pmf(i, k, 1/float(n)) * n
+	#counts[i] = rv.pmf(i) * n
+	#print stats.binom.pmf(k, 1/float(n), i)
 
 print counts
